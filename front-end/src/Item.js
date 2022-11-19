@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 
 function Item(props) {
@@ -50,10 +50,12 @@ function Item(props) {
   
   return (
     <div className="Item">
+    {error}
       <p>
-        {product.name}, {item.quantity}   
+        Product: {product.name} <br/> Quantity: {item.quantity} <br/>
         <button onClick={e => decreaseQuantity(item)}>-</button>
         <button onClick={e => increaseQuantity(item)}>+</button>
+        <br/>
         <button onClick={e => deleteItem(item)}>Remove from Cart</button>
       </p>
     </div>

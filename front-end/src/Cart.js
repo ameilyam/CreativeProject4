@@ -1,5 +1,5 @@
 import Item from "./Item.js"
-import axios from 'axios';
+//import axios from 'axios';
 
 function Cart(props) {
   const {items, updateCart} = props

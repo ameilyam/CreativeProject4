@@ -47,13 +47,23 @@ function App() {
   return (
     <div className="App">
       {error}
-      <h1>Products</h1>
+      <div id="topBar">
+      <h1>Welcome To Nova!</h1>
+      <h2>Your go to online clothing store</h2>
+      </div>
+      <h2 id="productIntro">Browse Our Items:</h2>
+      <form>
+         <button type="submit" formaction="#cartIntro">Jump To Your Cart</button>
+      </form>
+      <div id="productList">
       {products.map( product => (
-        <div key={product.id} className="product">
+        <div class="item">
+            <img src={product.image} alt="Flowers in Chania"/>
             <Product key={product.id} product={product} updateCart={updateCart} setError={setError}/>
         </div>
       ))} 
-      <h1>Cart</h1>
+      </div>
+      <h1 id="cartIntro">Cart</h1>
       <Cart items={cart} updateCart={updateCart}/> 
     </div>
   );

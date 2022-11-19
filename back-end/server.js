@@ -53,7 +53,8 @@ app.post('/api/products', (req, res) => {
     let product = {
         id: id,
         name: req.body.name,
-        price: req.body.price
+        price: req.body.price,
+        image: req.body.image
     };
     products.push(product);
     res.send(product);

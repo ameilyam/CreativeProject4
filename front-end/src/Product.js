@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function Product(props) {
@@ -16,9 +15,9 @@ function Product(props) {
   return (
     <div className="Product">
       <p>
-      {product.name}, {product.price}   
+      {product.name}, {product.price}   </p>
       <button onClick={e => addToCart(product.id)}>Add to Cart</button>
-      </p>
+      
     </div>
   );
 }
